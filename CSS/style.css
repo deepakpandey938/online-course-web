@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", "sen-serif";
+}
+html{
+    font-size: 62.5%;
+     overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 10px;
+   
+  }
+  
+  ::-webkit-scrollbar-vertical{
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: #d1e5ff;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff,#ff22e6);
+    border-radius: 10px; height: 10px;
+  }
+.logo{
+    width: 5rem;
+    height: 5rem;
+}
+.header-first{
+    padding: 0 4rem;
+    height: 6rem;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+    background-color: #333;
+    color: white;
+    position: sticky;
+}
+.mobile-nav-icon{
+ height: 3rem;
+ width: 3rem;
+}
+.mobile-nav-icon[name="close-outline"]{
+   display: none;
+   }
+   .navbar-mobile-btn{
+    display: none;
+    }
+.navbar-mobile-btn{
+   /* display: none; */
+   background: transparent;
+   cursor: pointer;
+   }
+.navbar ul{
+    
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    font-size: 1.9rem;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul li a:link,
+ul li a:visited{
+    display: inline-block;
+    font-size: 1.9rem;
+    font-weight: 500;
+ 
+    transition: all 0.3s;
+}
+ul li a:hover{
+    color: red;
+}
+ul li a:active{
+    color: red;
+}
+
+@media (max-width:62em) {
+    .navbar-mobile-btn{
+        display: block;
+        z-index: 999;
+       
+    }
+    .header-first {
+        position: relative;
+    }
+    .navbar{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(37, 36, 35);
+        position: absolute;
+       top: 0;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      
+       transform: translateX(100%);
+       transition: all 0.5s linear;
+       opacity: 0;
+       visibility: hidden;
+       pointer-events: none;
+    }
+    .navbar ul{
+        flex-direction: column;
+    }
+    .active .navbar{  
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active   .navbar-mobile-btn .mobile-nav-icon[name="close-outline"]{
+        display: block;
+    }
+    .active   .navbar-mobile-btn .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero section */
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    
+        height: 80vh;
+}
+.container-hero-section-box1{
+border: 1px solid black;
+width: 55%;
+padding: 4rem;
+background-color: #333;
+border-radius: 1rem;
+margin: 3rem 0rem 0rem 3rem;
+}
+.container-hero-section-box2{
+   
+    margin: 2rem;
+}
+.container-hero-section-box2 img{
+    width: 59rem;
+    height: 59rem;
+}
+.text-box-zero{
+    font-size: 4rem;
+    color: white;
+}
+.text-box-first-p{
+    font-size:1.7rem;
+    text-align: justify;
+    color: white;
+    margin-top: 2rem;
+}
+.text-box-first{
+    font-size: 5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: white;
+
+}
+.text-box-second{
+    font-size: 4.5rem;
+    color: white;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+.btn-Enroll{
+    background-color: white;
+    color: black;
+    border-radius: 0.6rem;
+    width: 14rem;
+    font-size: 2rem;
+    height: 3rem;
+    margin: 4rem 2rem 2rem 0rem;
+}
+.btn-Enroll:hover{
+    background-color:  rgb(255, 111, 0);
+    color: white;
+}
+
+
+@media (max-width:62em) {
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+            height: 100%;
+    }
+    .container-hero-section-box1{
+        border: 2px solid black;
+        width: 95%;
+        padding: 2rem;
+        margin: 2rem 0rem;
+        }
+        .text-box-first-p{
+            font-size:1.4rem;
+        }
+    .text-box-zero{
+        font-size: 2.5rem;
+    }
+    
+    .text-box-first{
+        font-size: 2.5rem;
+    }
+    .text-box-second{
+        font-size: 2.5rem;
+    }
+
+
+
+
+
+    .container-hero-section-box2 img{
+        width: 35rem;
+        height: 35rem;
+    }
+    
+}
+
+
+
+/* hero service section */
+.hero-service{
+    background-color: #333;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.hero-section-container-one{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    border: 1px solid white;
+   font-size: 2rem;
+   padding: 1rem;
+   width: 25rem;
+}
+
+.hero-section-container-two{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    border: 1px solid white;
+   font-size: 2rem;
+   padding: 1rem;
+   width: 25rem;
+}
+.hero-section-container-three{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    border: 1px solid white;
+   font-size: 2rem;
+   width: 25rem;
+   padding: 1rem;
+}
+.img-box{
+    width: 6rem;
+    height: 6rem;
+    color: white;
+}
+.box-contain-containt p{
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (max-width:62em) {
+    .hero-service{
+padding: 0rem;
+justify-content: space-around;
+    }
+    .img-box{
+        width: 4.8rem;
+        height: 4.8rem;
+        
+    }
+    .box-contain-containt p{
+        color: white;
+        text-align: center;
+        margin-top: 0rem;
+    }
+    
+    .hero-section-container-three{
+        padding: 0rem;
+        text-align: justify;
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 9rem;
+
+    }
+    .hero-section-container-two{
+        padding: 0rem;
+        text-align: justify;
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 9rem;
+    }
+    .hero-section-container-one{
+        padding: 0rem;
+        text-align: justify;
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* next section css */
+.next-section-container{
+    height: 80vh;
+}
